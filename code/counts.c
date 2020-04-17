@@ -11,6 +11,20 @@ void clearBuffer(char * buffer, int s) {
   }
 }
 
+void shiftBuffer(char * buffer, int size){
+  for (int j = 0; j < size; j++){
+    buffer[j] = buffer[j+1];
+  }
+  
+}
+
+int lowerCase(int ch){
+  if ('A' <= ch && ch <= 'Z') {
+    ch = ch - 'A' + 'a';
+  }
+  return ch;
+} 
+
 /* Counts the number of times the target word
  * appears in the file whose name is filename.
  *
@@ -43,10 +57,11 @@ int countWord(char * filename, char * word) {
   int k = 1;
   while ( (ch = fgetc(fp)) != EOF ) {
     // >>>> TASK STEP 11.2
-    if ('A' <= ch && ch <= 'Z') {
-      ch = ch - 'A' + 'a';
-    }
+    //if ('A' <= ch && ch <= 'Z') {
+    //ch = ch - 'A' + 'a';
+    //}
     // >>>> TASK STEP 11.2
+    ch = lowerCase(ch);
     if (isspace(ch)) { ch = ' '; }
     if (k < size) {
       buffer[k++] = ch;
@@ -60,10 +75,11 @@ int countWord(char * filename, char * word) {
       }
       else {
 	// >>>> TASK STEP 11.1
-	for (int j=0; j<size-1; j++) {  /* change upper bound of loop from size to size-1 */
-	  buffer[j] = buffer[j+1];
-	}
+	//for (int j=0; j<size-1; j++) {  /* change upper bound of loop from size to size-1 */
+	//buffer[j] = buffer[j+1];
+	//}
 	// <<<< TASK STEP 11.1
+	shiftBuffer(buffer, size -1);
 	buffer[size-1] = ch; /* change index here to match upper bound of loop */
       }
     }

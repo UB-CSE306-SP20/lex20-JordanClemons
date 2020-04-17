@@ -3,4 +3,6 @@
 
 int countWord(char * filename, char * target);
 
+void shiftBuffer(char * buffer, int size);
+
 #endif
