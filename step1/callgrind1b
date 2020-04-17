@@ -1,0 +1,650 @@
+Profile data file 'callgrind.out.20692' (creator: callgrind-3.11.0)
+--------------------------------------------------------------------------------
+I1 cache:
+D1 cache:
+LL cache:
+Timerange: Basic block 0 - 106598745
+Trigger: Program termination
+Profiled target:  ./counts-valgrind 1000 1000 (PID 20692, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:
+User annotated:
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+         Ir
+--------------------------------------------------------------------------------
+531,135,524  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+         Ir  file:function
+--------------------------------------------------------------------------------
+
+531,135,524  *  ???:0x0000000000001120 [/usr/lib64/ld-2.17.so]
+    112,464  >   /usr/src/debug/glibc-2.17-c758a686/elf/rtld.c:_dl_start (1x) [/usr/lib64/ld-2.17.so]
+      3,072  >   /usr/src/debug/glibc-2.17-c758a686/elf/dl-init.c:_dl_init (1x) [/usr/lib64/ld-2.17.so]
+531,019,969  >   ???:0x00000000004005a0 (1x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+
+531,019,969  < ???:0x0000000000001120 (1x) [/usr/lib64/ld-2.17.so]
+531,019,969  *  ???:0x00000000004005a0 [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+531,019,953  >   /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave (1x) [/usr/lib64/ld-2.17.so]
+
+531,019,953  < ???:0x00000000004005a0 (1x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+531,019,953  *  /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave [/usr/lib64/ld-2.17.so]
+      1,168  >   /usr/src/debug/glibc-2.17-c758a686/elf/../elf/dl-runtime.c:_dl_fixup (1x) [/usr/lib64/ld-2.17.so]
+531,018,757  >   /usr/src/debug/glibc-2.17-c758a686/csu/../csu/libc-start.c:(below main) (1x) [/usr/lib64/libc-2.17.so]
+
+531,018,757  < /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave (1x) [/usr/lib64/ld-2.17.so]
+531,018,757  *  /usr/src/debug/glibc-2.17-c758a686/csu/../csu/libc-start.c:(below main) [/usr/lib64/libc-2.17.so]
+         54  >   ???:__libc_csu_init (1x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+         61  >   /usr/src/debug/glibc-2.17-c758a686/stdlib/cxa_atexit.c:__cxa_atexit (1x) [/usr/lib64/libc-2.17.so]
+531,016,824  >   /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/main.c:main (1x)
+      1,726  >   /usr/src/debug/glibc-2.17-c758a686/stdlib/exit.c:exit (1x) [/usr/lib64/libc-2.17.so]
+         30  >   /usr/src/debug////////glibc-2.17-c758a686/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp (1x) [/usr/lib64/libc-2.17.so]
+
+531,016,824  *  main.c:main [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+531,016,816  >   /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts.c:countWord (1x)
+
+531,016,824  < /usr/src/debug/glibc-2.17-c758a686/csu/../csu/libc-start.c:(below main) (1x) [/usr/lib64/libc-2.17.so]
+531,016,824  *  /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/main.c:main
+
+531,016,816  < main.c:main (1x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+531,016,816  *  /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts.c:countWord
+
+531,016,816  *  counts.c:countWord [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+121,921,775  >   /usr/src/debug/glibc-2.17-c758a686/libio/getc.c:getc (3293495x) [/usr/lib64/libc-2.17.so]
+ 69,442,076  >   /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:__strcmp_sse42 (3156458x) [/usr/lib64/libc-2.17.so]
+  9,880,482  >   /usr/src/debug/glibc-2.17-c758a686/ctype/../include/ctype.h:__ctype_b_loc (3293494x) [/usr/lib64/libc-2.17.so]
+     64,906  >   /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (6x) [/usr/lib64/ld-2.17.so]
+  2,500,907  >   counts.c:clearBuffer (34259x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+
+        341  < /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x) [/usr/lib64/ld-2.17.so]
+121,921,775  < counts.c:countWord (3293495x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+121,922,116  *  /usr/src/debug/glibc-2.17-c758a686/libio/getc.c:getc [/usr/lib64/libc-2.17.so]
+     62,360  >   /usr/src/debug/glibc-2.17-c758a686/libio/genops.c:__uflow (404x) [/usr/lib64/libc-2.17.so]
+
+         22  < /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x) [/usr/lib64/ld-2.17.so]
+ 69,442,076  < counts.c:countWord (3156458x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+ 69,442,098  *  /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:__strcmp_sse42 [/usr/lib64/libc-2.17.so]
+
+ 32,934,960  *  /usr/src/debug/glibc-2.17-c758a686/libio/libioP.h:getc
+
+          3  < /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x) [/usr/lib64/ld-2.17.so]
+  9,880,482  < counts.c:countWord (3293494x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+  9,880,485  *  /usr/src/debug/glibc-2.17-c758a686/ctype/../include/ctype.h:__ctype_b_loc [/usr/lib64/libc-2.17.so]
+
+  2,500,907  < counts.c:countWord (34259x) [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+  2,500,907  *  counts.c:clearBuffer [/home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts-valgrind]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts.c
+--------------------------------------------------------------------------------
+  No information has been collected for /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts.c
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug/glibc-2.17-c758a686/csu/../csu/libc-start.c
+--------------------------------------------------------------------------------
+Ir
+
+-- line 124 ----------------------------------------
+ .  LIBC_START_MAIN (int (*main) (int, char **, char ** MAIN_AUXVEC_DECL),
+ .               int argc, char **argv,
+ .  #ifdef LIBC_START_MAIN_AUXVEC_ARG
+ .               ElfW(auxv_t) *auxvec,
+ .  #endif
+ .               __typeof (main) init,
+ .               void (*fini) (void),
+ .               void (*rtld_fini) (void), void *stack_end)
+10  {
+ .    /* Result of the 'main' function.  */
+ .    int result;
+ .
+ 9    __libc_multiple_libcs = &_dl_starting_up && !_dl_starting_up;
+ .
+ .  #ifndef SHARED
+ .    char **ev = &argv[argc + 1];
+ .
+ .    __environ = ev;
+ .
+ .    /* Store the lowest stack address.  This is done in ld.so if this is
+ .       the code for the DSO.  */
+-- line 144 ----------------------------------------
+-- line 190 ----------------------------------------
+ .    THREAD_SET_POINTER_GUARD (pointer_chk_guard);
+ .  # else
+ .    __pointer_chk_guard_local = pointer_chk_guard;
+ .  # endif
+ .
+ .  #endif
+ .
+ .    /* Register the destructor of the dynamic linker if there is any.  */
+ 2    if (__builtin_expect (rtld_fini != NULL, 1))
+ 4      __cxa_atexit ((void (*) (void *)) rtld_fini, NULL, NULL);
+61  => /usr/src/debug/glibc-2.17-c758a686/stdlib/cxa_atexit.c:__cxa_atexit (1x)
+ .
+ .  #ifndef SHARED
+ .    /* Call the initializer of the libc.  This is only needed here if we
+ .       are compiling for the static library in which case we haven't
+ .       run the constructors in `_dl_start_user'.  */
+ .    __libc_init_first (argc, argv, __environ);
+ .
+ .    /* Register the destructor of the program, if any.  */
+-- line 207 ----------------------------------------
+-- line 213 ----------------------------------------
+ .       only for statically linked applications since otherwise the dynamic
+ .       loader did the work already.  */
+ .    if (__builtin_expect (__libc_enable_secure, 0))
+ .      __libc_check_standard_fds ();
+ .  #endif
+ .
+ .    /* Call the initializer of the program, if any.  */
+ .  #ifdef SHARED
+ 6    if (__builtin_expect (GLRO(dl_debug_mask) & DL_DEBUG_IMPCALLS, 0))
+ .      GLRO(dl_debug_printf) ("\ninitialize program: %s\n\n", argv[0]);
+ .  #endif
+ 2    if (init)
+ 5      (*init) (argc, argv, __environ MAIN_AUXVEC_PARAM);
+54  => ???:__libc_csu_init (1x)
+ .
+ .  #ifdef SHARED
+ .    /* Auditing checkpoint: we have a new object.  */
+ 4    if (__builtin_expect (GLRO(dl_naudit) > 0, 0))
+ .      {
+ .        struct audit_ifaces *afct = GLRO(dl_audit);
+ .        struct link_map *head = GL(dl_ns)[LM_ID_BASE]._ns_loaded;
+ .        for (unsigned int cnt = 0; cnt < GLRO(dl_naudit); ++cnt)
+ .      {
+ .        if (afct->preinit != NULL)
+ .          afct->preinit (&head->l_audit[cnt].cookie);
+ .
+ .        afct = afct->next;
+ .      }
+ .      }
+ .  #endif
+ .
+ .  #ifdef SHARED
+ 2    if (__builtin_expect (GLRO(dl_debug_mask) & DL_DEBUG_IMPCALLS, 0))
+ .      GLRO(dl_debug_printf) ("\ntransferring control: %s\n\n", argv[0]);
+ .  #endif
+ .
+ .  #ifdef HAVE_CLEANUP_JMP_BUF
+ .    /* Memory for the cancellation buffer.  */
+ .    struct pthread_unwind_buf unwind_buf;
+ .
+ .    int not_first_call;
+ 2    not_first_call = setjmp ((struct __jmp_buf_tag *) unwind_buf.cancel_jmp_buf);
+30  => /usr/src/debug////////glibc-2.17-c758a686/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp (1x)
+ 2    if (__builtin_expect (! not_first_call, 1))
+ .      {
+ .        struct pthread *self = THREAD_SELF;
+ .
+ .        /* Store old info.  */
+ 2        unwind_buf.priv.data.prev = THREAD_GETMEM (self, cleanup_jmp_buf);
+ 2        unwind_buf.priv.data.cleanup = THREAD_GETMEM (self, cleanup);
+ .
+ .        /* Store the new cleanup handler info.  */
+ 2        THREAD_SETMEM (self, cleanup_jmp_buf, &unwind_buf);
+ .
+ .        /* Run the program.  */
+ 6        result = main (argc, argv, __environ MAIN_AUXVEC_PARAM);
+531,016,824  => /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/main.c:main (1x)
+ .      }
+ .    else
+ .      {
+ .        /* Remove the thread-local data.  */
+ .  # ifdef SHARED
+ .        PTHFCT_CALL (ptr__nptl_deallocate_tsd, ());
+ .  # else
+ .        extern void __nptl_deallocate_tsd (void) __attribute ((weak));
+-- line 274 ----------------------------------------
+-- line 292 ----------------------------------------
+ .      /* Not much left to do but to exit the thread, not the process.  */
+ .      __exit_thread (0);
+ .      }
+ .  #else
+ .    /* Nothing fancy, just call the function.  */
+ .    result = main (argc, argv, __environ MAIN_AUXVEC_PARAM);
+ .  #endif
+ .
+ 2    exit (result);
+1,726  => /usr/src/debug/glibc-2.17-c758a686/stdlib/exit.c:exit (1x)
+ .  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S
+--------------------------------------------------------------------------------
+       Ir
+
+-- line 122 ----------------------------------------
+        .
+        .  #if defined USE_AS_STRNCMP || defined USE_AS_STRNCASECMP_L
+        .       test    %rdx, %rdx
+        .       je      LABEL(strcmp_exitz)
+        .       cmp     $1, %rdx
+        .       je      LABEL(Byte0)
+        .       mov     %rdx, %r11
+        .  #endif
+3,156,459       mov     %esi, %ecx
+3,156,459       mov     %edi, %eax
+        .  /* Use 64bit AND here to avoid long NOP padding.  */
+3,156,459       and     $0x3f, %rcx             /* rsi alignment in cache line */
+3,156,459       and     $0x3f, %rax             /* rdi alignment in cache line */
+        .  #if defined USE_AS_STRCASECMP_L || defined USE_AS_STRNCASECMP_L
+        .       .section .rodata.cst16,"aM",@progbits,16
+        .       .align 16
+        .  LABEL(belowupper):
+        .       .quad   0x4040404040404040
+        .       .quad   0x4040404040404040
+        .  LABEL(topupper):
+        .  # ifdef USE_AVX
+-- line 142 ----------------------------------------
+-- line 152 ----------------------------------------
+        .       .previous
+        .       movdqa  LABEL(belowupper)(%rip), %xmm4
+        .  # define UCLOW_reg %xmm4
+        .       movdqa  LABEL(topupper)(%rip), %xmm5
+        .  # define UCHIGH_reg %xmm5
+        .       movdqa  LABEL(touppermask)(%rip), %xmm6
+        .  # define LCQWORD_reg %xmm6
+        .  #endif
+3,156,459       cmp     $0x30, %ecx
+3,156,459       ja      LABEL(crosscache)/* rsi: 16-byte load will cross cache line */
+3,156,459       cmp     $0x30, %eax
+3,156,459       ja      LABEL(crosscache)/* rdi: 16-byte load will cross cache line */
+3,156,459       movdqu  (%rdi), %xmm1
+3,156,459       movdqu  (%rsi), %xmm2
+        .  #if defined USE_AS_STRCASECMP_L || defined USE_AS_STRNCASECMP_L
+        .  # ifdef USE_AVX
+        .  #  define TOLOWER(reg1, reg2) \
+        .       vpcmpgtb UCLOW_reg, reg1, %xmm7;                        \
+        .       vpcmpgtb UCHIGH_reg, reg1, %xmm8;                       \
+        .       vpcmpgtb UCLOW_reg, reg2, %xmm9;                        \
+        .       vpcmpgtb UCHIGH_reg, reg2, %xmm10;                      \
+        .       vpandn  %xmm7, %xmm8, %xmm8;                                    \
+-- line 173 ----------------------------------------
+-- line 192 ----------------------------------------
+        .       pand    LCQWORD_reg, %xmm9;                             \
+        .       por     %xmm7, reg1;                                    \
+        .       por     %xmm9, reg2
+        .  # endif
+        .       TOLOWER (%xmm1, %xmm2)
+        .  #else
+        .  # define TOLOWER(reg1, reg2)
+        .  #endif
+3,156,459       pxor    %xmm0, D(%xmm0)         /* clear %xmm0 for null char checks */
+3,156,459       pcmpeqb %xmm1, D(%xmm0)         /* Any null chars? */
+3,156,459       pcmpeqb %xmm2, D(%xmm1)         /* compare first 16 bytes for equality */
+3,156,459       psubb   %xmm0, D(%xmm1)         /* packed sub of comparison results*/
+3,156,459       pmovmskb %xmm1, %edx
+3,156,459       sub     $0xffff, %edx           /* if first 16 bytes are same, edx == 0xffff */
+3,156,459       jnz     LABEL(less16bytes)/* If not, find different value or null char */
+        .  #if defined USE_AS_STRNCMP || defined USE_AS_STRNCASECMP_L
+        .       sub     $16, %r11
+        .       jbe     LABEL(strcmp_exitz)/* finish comparision */
+        .  #endif
+        .       add     $16, %rsi               /* prepare to search next 16 bytes */
+        .       add     $16, %rdi               /* prepare to search next 16 bytes */
+        .
+        .       /*
+-- line 214 ----------------------------------------
+-- line 1706 ----------------------------------------
+        .       lea     (%rsi, %rcx), %rsi      /* locate the exact address for second operand(rsi) */
+        .       test    %r8d, %r8d
+        .       jz      LABEL(ret)
+        .       xchg    %rsi, %rdi              /* recover original order according to flag(%r8d) */
+        .
+        .       .p2align 4
+        .  LABEL(ret):
+        .  LABEL(less16bytes):
+3,156,459       bsf     %rdx, %rdx              /* find and store bit index in %rdx */
+        .
+        .  #if defined USE_AS_STRNCMP || defined USE_AS_STRNCASECMP_L
+        .       sub     %rdx, %r11
+        .       jbe     LABEL(strcmp_exitz)
+        .  #endif
+3,156,459       movzbl  (%rsi, %rdx), %ecx
+3,156,459       movzbl  (%rdi, %rdx), %eax
+        .
+        .  #if defined USE_AS_STRCASECMP_L || defined USE_AS_STRNCASECMP_L
+        .       leaq    _nl_C_LC_CTYPE_tolower+128*4(%rip), %rdx
+        .       movl    (%rdx,%rcx,4), %ecx
+        .       movl    (%rdx,%rax,4), %eax
+        .  #endif
+        .
+3,156,459       sub     %ecx, %eax
+3,156,459       ret
+        .
+        .  LABEL(strcmp_exitz):
+        .       xor     %eax, %eax
+        .       ret
+        .
+        .       .p2align 4
+        .       // XXX Same as code above
+        .  LABEL(Byte0):
+-- line 1738 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h
+--------------------------------------------------------------------------------
+Ir
+
+-- line 63 ----------------------------------------
+ .      .align 16
+ .      cfi_startproc
+ .  _dl_runtime_resolve:
+ .      cfi_adjust_cfa_offset(16) # Incorporate PLT
+ .  # if DL_RUNTIME_RESOLVE_REALIGN_STACK
+ .  #  if LOCAL_STORAGE_AREA != 8
+ .  #   error LOCAL_STORAGE_AREA must be 8
+ .  #  endif
+ 8      pushq %rbx                      # push subtracts stack by 8.
+ .      cfi_adjust_cfa_offset(8)
+ .      cfi_rel_offset(%rbx, 0)
+ 8      mov %RSP_LP, %RBX_LP
+ .      cfi_def_cfa_register(%rbx)
+ 8      and $-STATE_SAVE_ALIGNMENT, %RSP_LP
+ .  # endif
+ .  # ifdef REGISTER_SAVE_AREA
+ 8      sub $REGISTER_SAVE_AREA, %RSP_LP
+ .  #  if !DL_RUNTIME_RESOLVE_REALIGN_STACK
+ .      cfi_adjust_cfa_offset(REGISTER_SAVE_AREA)
+ .  #  endif
+ .  # else
+ .      # Allocate stack space of the required size to save the state.
+ .  #  if IS_IN (rtld)
+ .      sub _rtld_local_ro+RTLD_GLOBAL_RO_DL_X86_CPU_FEATURES_OFFSET+XSAVE_STATE_SIZE_OFFSET(%rip), %RSP_LP
+ .  #  else
+ .      sub _dl_x86_cpu_features+XSAVE_STATE_SIZE_OFFSET(%rip), %RSP_LP
+ .  #  endif
+ .  # endif
+ .      # Preserve registers otherwise clobbered.
+ 8      movq %rax, REGISTER_SAVE_RAX(%rsp)
+ 8      movq %rcx, REGISTER_SAVE_RCX(%rsp)
+ 8      movq %rdx, REGISTER_SAVE_RDX(%rsp)
+ 8      movq %rsi, REGISTER_SAVE_RSI(%rsp)
+ 8      movq %rdi, REGISTER_SAVE_RDI(%rsp)
+ 8      movq %r8, REGISTER_SAVE_R8(%rsp)
+ 8      movq %r9, REGISTER_SAVE_R9(%rsp)
+ .  # ifdef USE_FXSAVE
+ 8      fxsave STATE_SAVE_OFFSET(%rsp)
+ .  # else
+ .      movl $STATE_SAVE_MASK, %eax
+ .      xorl %edx, %edx
+ .      # Clear the XSAVE Header.
+ .  #  ifdef USE_XSAVE
+ .      movq %rdx, (STATE_SAVE_OFFSET + 512)(%rsp)
+ .      movq %rdx, (STATE_SAVE_OFFSET + 512 + 8)(%rsp)
+ .  #  endif
+-- line 108 ----------------------------------------
+-- line 121 ----------------------------------------
+ .  #    error STATE_SAVE_OFFSET != 0x40
+ .  #   endif
+ .      # xsavec STATE_SAVE_OFFSET(%rsp)
+ .      .byte 0x0f, 0xc7, 0x64, 0x24, 0x40
+ .  #  endif
+ .  # endif
+ .      # Copy args pushed by PLT in register.
+ .      # %rdi: link_map, %rsi: reloc_index
+ 8      mov (LOCAL_STORAGE_AREA + 8)(%BASE), %RSI_LP
+ 8      mov LOCAL_STORAGE_AREA(%BASE), %RDI_LP
+ 8      call _dl_fixup          # Call resolver.
+1,168  => /usr/src/debug/glibc-2.17-c758a686/elf/../elf/dl-runtime.c:_dl_fixup (1x)
+ 8      mov %RAX_LP, %R11_LP    # Save return value
+ .      # Get register content back.
+ .  # ifdef USE_FXSAVE
+ 8      fxrstor STATE_SAVE_OFFSET(%rsp)
+ .  # else
+ .      movl $STATE_SAVE_MASK, %eax
+ .      xorl %edx, %edx
+ .      xrstor STATE_SAVE_OFFSET(%rsp)
+ .  # endif
+ 8      movq REGISTER_SAVE_R9(%rsp), %r9
+ 8      movq REGISTER_SAVE_R8(%rsp), %r8
+ 8      movq REGISTER_SAVE_RDI(%rsp), %rdi
+ 8      movq REGISTER_SAVE_RSI(%rsp), %rsi
+ 8      movq REGISTER_SAVE_RDX(%rsp), %rdx
+ 8      movq REGISTER_SAVE_RCX(%rsp), %rcx
+ 8      movq REGISTER_SAVE_RAX(%rsp), %rax
+ .  # if DL_RUNTIME_RESOLVE_REALIGN_STACK
+ 8      mov %RBX_LP, %RSP_LP
+ .      cfi_def_cfa_register(%rsp)
+ 8      movq (%rsp), %rbx
+ .      cfi_restore(%rbx)
+ .  # endif
+ .      # Adjust stack(PLT did 2 pushes)
+ 8      add $(LOCAL_STORAGE_AREA + 16), %RSP_LP
+ .      cfi_adjust_cfa_offset(-(LOCAL_STORAGE_AREA + 16))
+ .      # Preserve bound registers.
+ 8      PRESERVE_BND_REGS_PREFIX
+531,018,757  => /usr/src/debug/glibc-2.17-c758a686/csu/../csu/libc-start.c:(below main) (1x)
+ .      jmp *%r11               # Jump to function address.
+ .      cfi_endproc
+ .      .size _dl_runtime_resolve, .-_dl_runtime_resolve
+ .  #endif
+ .
+ .
+ .  #if !defined PROF && defined _dl_runtime_profile
+ .  # if (LR_VECTOR_OFFSET % VEC_SIZE) != 0
+-- line 166 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: main.c
+--------------------------------------------------------------------------------
+Ir
+
+ .  #include <stdio.h>
+ .  #include <stdlib.h>
+ .  #include "counts.h"
+ .
+ 2  int main() {
+ 3    countWord("../data/file00","the");
+531,016,816  => /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/counts.c:countWord (1x)
+ 1    return 0;
+ 2  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug/glibc-2.17-c758a686/libio/libioP.h
+--------------------------------------------------------------------------------
+        Ir
+
+-- line 879 ----------------------------------------
+         .  # define CHECK_FILE(FILE, RET) COERCE_FILE (FILE)
+         .  #endif
+         .
+         .  static inline void
+         .  __attribute__ ((__always_inline__))
+         .  _IO_acquire_lock_fct (_IO_FILE **p)
+         .  {
+         .    _IO_FILE *fp = *p;
+ 6,586,994    if ((fp->_flags & _IO_USER_LOCK) == 0)
+26,349,189      _IO_funlockfile (fp);
+         .  }
+         .
+         .  static inline void
+         .  __attribute__ ((__always_inline__))
+         .  _IO_acquire_lock_clear_flags2_fct (_IO_FILE **p)
+         .  {
+         .    _IO_FILE *fp = *p;
+         .    fp->_flags2 &= ~(_IO_FLAGS2_FORTIFY | _IO_FLAGS2_SCANF_STD);
+-- line 896 ----------------------------------------
+-- line 951 ----------------------------------------
+         .
+         .  /* Perform vtable pointer validation.  If validation fails, terminate
+         .     the process.  */
+         .  static inline const struct _IO_jump_t *
+         .  IO_validate_vtable (const struct _IO_jump_t *vtable)
+         .  {
+         .    /* Fast path: The vtable pointer is within the __libc_IO_vtables
+         .       section.  */
+     2,444    uintptr_t section_length = __stop___libc_IO_vtables - __start___libc_IO_vtables;
+         .    uintptr_t ptr = (uintptr_t) vtable;
+     2,432    uintptr_t offset = ptr - (uintptr_t) __start___libc_IO_vtables;
+     2,432    if (__glibc_unlikely (offset >= section_length))
+         .      /* The vtable pointer is not in the expected section.  Use the
+         .         slow path, which will terminate the process if necessary.  */
+         .      _IO_vtable_check ();
+         .    return vtable;
+         .  }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: counts.c
+--------------------------------------------------------------------------------
+         Ir
+
+          .  #include <stdio.h>
+          .  #include <stdlib.h>
+          .  #include <string.h>
+          .  #include <ctype.h>
+          .  #include <time.h>
+          .  #include "counts.h"
+          .
+    137,036  void clearBuffer(char * buffer, int s) {
+  1,233,324    for (int i=0; i<s+1; i++) {
+  1,027,770      buffer[i] = '\0';
+          .    }
+    102,777  }
+          .
+          .  /* Counts the number of times the target word
+          .   * appears in the file whose name is filename.
+          .   *
+          .   * A word is a sequence of characters delimited
+          .   * by whitespace (as determined by the library
+          .   * function isspace, or the start of the file,
+          .   * or the end of the file.
+          .   *
+          .   * Words match whether they are upper case or
+          .   * lower case.  For example, 'As' and 'as' match.
+          .   *
+          .   * https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm
+          .   */
+         12  int countWord(char * filename, char * word) {
+         10    int size = strlen(word)+2;
+        944  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+         23    char buffer[size+1];
+          5    clearBuffer(buffer, size);
+         73  => counts.c:clearBuffer (1x)
+          .
+         23    char target[size+1];
+          2    target[0] = ' ';
+          5    target[size-1] = ' ';
+          4    target[size] = '\0';
+         51    for (int i=1; i<size-1; i++) { target[i] = word[i-1]; }
+          .
+          .    FILE *fp;
+         10    fp = fopen(filename, "r");
+     59,300  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+          .    int ch;
+          1    int count = 0;  /* Initialize count to zero */
+          2    buffer[0] = ' ';
+          1    int k = 1;
+ 23,054,477    while ( (ch = fgetc(fp)) != EOF ) {
+121,921,775  => /usr/src/debug/glibc-2.17-c758a686/libio/getc.c:getc (3293495x)
+      1,252  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+          .      // >>>> TASK STEP 11.2
+ 11,838,472      if ('A' <= ch && ch <= 'Z') {
+     68,599        ch = ch - 'A' + 'a';
+          .      }
+          .      // >>>> TASK STEP 11.2
+ 40,105,021      if (isspace(ch)) { ch = ' '; }
+  9,880,482  => /usr/src/debug/glibc-2.17-c758a686/ctype/../include/ctype.h:__ctype_b_loc (3293494x)
+      1,085  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+  9,880,485      if (k < size) {
+  1,233,324        buffer[k++] = ch;
+          .      }
+          .      else {
+ 25,251,676        if (strcmp(buffer,target) == 0) {
+ 69,442,076  => /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:__strcmp_sse42 (3156458x)
+        958  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+     34,258     count++;
+    171,290     clearBuffer(buffer, size);
+  2,500,834  => counts.c:clearBuffer (34258x)
+     68,516     buffer[0] = ' ';
+     68,516     k = 1;
+          .        }
+          .        else {
+          .     // >>>> TASK STEP 11.1
+ 81,177,226     for (int j=0; j<size-1; j++) {  /* change upper bound of loop from size to size-1 */
+112,399,236       buffer[j] = buffer[j+1];
+          .     }
+          .     // <<<< TASK STEP 11.1
+ 21,855,407     buffer[size-1] = ch; /* change index here to match upper bound of loop */
+          .        }
+          .      }
+          .    }
+          8    fclose(fp);
+      1,367  => /usr/src/debug////////glibc-2.17-c758a686/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_fxsave'2 (1x)
+          2    return count;
+          8  }
+          .
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug/glibc-2.17-c758a686/libio/getc.c
+--------------------------------------------------------------------------------
+        Ir
+
+-- line 27 ----------------------------------------
+         .
+         .  #include "libioP.h"
+         .  #include "stdio.h"
+         .
+         .  #undef _IO_getc
+         .
+         .  int
+         .  _IO_getc (FILE *fp)
+ 6,586,992  {
+         .    int result;
+         .    CHECK_FILE (fp, EOF);
+52,695,936    _IO_acquire_lock (fp);
+19,761,380    result = _IO_getc_unlocked (fp);
+    62,360  => /usr/src/debug/glibc-2.17-c758a686/libio/genops.c:__uflow (404x)
+         .    _IO_release_lock (fp);
+         .    return result;
+ 9,880,488  }
+         .
+         .  #undef getc
+         .
+         .  #ifdef weak_alias
+         .  weak_alias (_IO_getc, getc)
+         .  weak_alias (_IO_getc, fgetc)
+         .
+         .  #ifndef _IO_MTSAFE_IO
+-- line 50 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/src/debug/glibc-2.17-c758a686/ctype/../include/ctype.h
+--------------------------------------------------------------------------------
+       Ir
+
+-- line 26 ----------------------------------------
+        .  __libc_tsd_define (extern, const uint16_t *, CTYPE_B)
+        .  __libc_tsd_define (extern, const int32_t *, CTYPE_TOUPPER)
+        .  __libc_tsd_define (extern, const int32_t *, CTYPE_TOLOWER)
+        .
+        .
+        .  CTYPE_EXTERN_INLINE const uint16_t ** __attribute__ ((const))
+        .  __ctype_b_loc (void)
+        .  {
+6,586,990    return __libc_tsd_address (const uint16_t *, CTYPE_B);
+3,293,495  }
+        .
+        .  CTYPE_EXTERN_INLINE const int32_t ** __attribute__ ((const))
+        .  __ctype_toupper_loc (void)
+        .  {
+        .    return __libc_tsd_address (const int32_t *, CTYPE_TOUPPER);
+        .  }
+        .
+        .  CTYPE_EXTERN_INLINE const int32_t ** __attribute__ ((const))
+-- line 43 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/main.c
+--------------------------------------------------------------------------------
+  No information has been collected for /home/csdue/jaclemon/CSE306/lex20-JordanClemons/code/main.c
+
+--------------------------------------------------------------------------------
+ Ir
+--------------------------------------------------------------------------------
+100  percentage of events annotated

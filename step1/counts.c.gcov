@@ -1,0 +1,79 @@
+        -:    0:Source:counts.c
+        -:    0:Graph:counts.gcno
+        -:    0:Data:counts.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <string.h>
+        -:    4:#include <ctype.h>
+        -:    5:#include <time.h>
+        -:    6:#include "counts.h"
+        -:    7:
+    34259:    8:void clearBuffer(char * buffer, int s) {
+   239813:    9:  for (int i=0; i<s+1; i++) {
+   205554:   10:    buffer[i] = '\0';
+        -:   11:  }
+    34259:   12:}
+        -:   13:
+        -:   14:/* Counts the number of times the target word
+        -:   15: * appears in the file whose name is filename.
+        -:   16: *
+        -:   17: * A word is a sequence of characters delimited
+        -:   18: * by whitespace (as determined by the library
+        -:   19: * function isspace, or the start of the file,
+        -:   20: * or the end of the file.
+        -:   21: *
+        -:   22: * Words match whether they are upper case or 
+        -:   23: * lower case.  For example, 'As' and 'as' match.
+        -:   24: *
+        -:   25: * https://www.tutorialspoint.com/c_standard_library/c_function_isspace.htm
+        -:   26: */
+        1:   27:int countWord(char * filename, char * word) {
+        1:   28:  int size = strlen(word)+2;
+        1:   29:  char buffer[size+1];
+        1:   30:  clearBuffer(buffer, size);
+        -:   31:
+        1:   32:  char target[size+1];
+        1:   33:  target[0] = ' ';
+        1:   34:  target[size-1] = ' ';
+        1:   35:  target[size] = '\0';
+        1:   36:  for (int i=1; i<size-1; i++) { target[i] = word[i-1]; }
+        -:   37:
+        -:   38:  FILE *fp;
+        1:   39:  fp = fopen(filename, "r");
+        -:   40:  int ch;
+        1:   41:  int count = 0;  /* Initialize count to zero */
+        1:   42:  buffer[0] = ' ';
+        1:   43:  int k = 1;
+  3293497:   44:  while ( (ch = fgetc(fp)) != EOF ) {
+        -:   45:    // >>>> TASK STEP 11.2
+  3293495:   46:    if ('A' <= ch && ch <= 'Z') {
+    68599:   47:      ch = ch - 'A' + 'a';
+        -:   48:    }
+        -:   49:    // >>>> TASK STEP 11.2
+  3293495:   50:    if (isspace(ch)) { ch = ' '; }
+  3293495:   51:    if (k < size) {
+   137036:   52:      buffer[k++] = ch;
+        -:   53:    }
+        -:   54:    else {
+  3156459:   55:      if (strcmp(buffer,target) == 0) {
+    34258:   56:	count++;
+    34258:   57:	clearBuffer(buffer, size);
+    34258:   58:	buffer[0] = ' ';
+    34258:   59:	k = 1;
+        -:   60:      }
+        -:   61:      else {
+        -:   62:	// >>>> TASK STEP 11.1
+ 15611005:   63:	for (int j=0; j<size-1; j++) {  /* change upper bound of loop from size to size-1 */
+ 12488804:   64:	  buffer[j] = buffer[j+1];
+        -:   65:	}
+        -:   66:	// <<<< TASK STEP 11.1
+  3122201:   67:	buffer[size-1] = ch; /* change index here to match upper bound of loop */
+        -:   68:      }
+        -:   69:    }
+        -:   70:  }
+        1:   71:  fclose(fp);
+        1:   72:  return count;
+        -:   73:}
+        -:   74:
