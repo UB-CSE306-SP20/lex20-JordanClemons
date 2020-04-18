@@ -12,15 +12,18 @@ void clearBuffer(char * buffer, int s) {
 }
 
 void shiftBuffer(char * buffer, int size){
-  // for (int j = 0; j < size; j++){
-  //buffer[j] = buffer[j+1];
-  //}
-  while(buffer[0] != ' ' || buffer[1] != NULL){
-    for (int j = 0; j < size; j++){
-      buffer[j] = buffer[j+1];
-    }
-
+  
+  int offset = size;
+  while(buffer[offset] != ' ' && offset != EOF){
+    offset = offset + 1;
   }
+  
+  if(offset == EOF){ clearBuffer(buffer,size); return;}
+  
+  for (int j = 0; j < size; j++){
+    buffer[j] = buffer[j+ offset];
+  }
+
 
 }
 
