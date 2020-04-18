@@ -12,10 +12,16 @@ void clearBuffer(char * buffer, int s) {
 }
 
 void shiftBuffer(char * buffer, int size){
-  for (int j = 0; j < size; j++){
-    buffer[j] = buffer[j+1];
+  // for (int j = 0; j < size; j++){
+  //buffer[j] = buffer[j+1];
+  //}
+  while(buffer[0] != ' ' || buffer[1] != NULL){
+    for (int j = 0; j < size; j++){
+      buffer[j] = buffer[j+1];
+    }
+
   }
-  
+
 }
 
 int lowerCase(int ch){
